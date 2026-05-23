@@ -1,11 +1,6 @@
 name: 每日股票分析
 
 on:
-  # 提前错峰执行，避免延迟跨天判定为非交易日
-  schedule:
-    - cron: '38 10 * * 1-4'  # 周一~周四 北京时间18:38
-    - cron: '9 10 * * 5'     # 周五 北京时间18:08
-  # 手动触发
   workflow_dispatch:
     inputs:
       mode:
